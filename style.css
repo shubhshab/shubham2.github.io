@@ -95,27 +95,22 @@ h1 {
    LIVE TERMINAL WINDOW
    =============================== */
 
-.terminal {
+/* ===============================
+   FULLSCREEN INTRO TERMINAL
+   =============================== */
+
+#intro-terminal {
     position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 35%;
-    background: rgba(0, 0, 0, 0.9);
-    border-top: 2px solid #00ff9c;
-    padding: 15px;
-    overflow: hidden;
-    font-size: 14px;
-    z-index: 1000;
-}
-
-#terminal-output {
+    inset: 0;
+    background: #000;
     color: #00ff9c;
+    font-family: 'Courier New', monospace;
+    padding: 30px;
+    z-index: 99999;
+}
+
+#intro-output {
     white-space: pre-wrap;
-    line-height: 1.4;
+    font-size: 15px;
+    line-height: 1.6;
 }
-/* Reserve space so content is not hidden */
-body {
-    padding-bottom: 38vh;
-}
-
-
