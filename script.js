@@ -9,7 +9,7 @@ const introLogs = [
   "Establishing encrypted tunnel...",
   "Access granted ✔",
   "",
-  "Welcome, Recruiter."
+  "Welcome, VISITOR."
 ];
 
 let i = 0;
