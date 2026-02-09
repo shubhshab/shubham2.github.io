@@ -36,10 +36,67 @@ nav ul li a {
 /* Hero */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-    color: white;
+    padding: 120px 20px;
+    background: radial-gradient(circle at top, #0f3d2e, #020d08);
+    color: #00ff9c;
+    position: relative;
+    overflow: hidden;
 }
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(0, 255, 156, 0.08),
+            rgba(0, 255, 156, 0.08) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+    opacity: 0.25;
+    pointer-events: none;
+}
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: radial-gradient(circle at top, #0f3d2e, #020d08);
+    color: #00ff9c;
+    position: relative;
+    overflow: hidden;
+}
+
+/* hacked screen effect */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(0, 255, 156, 0.08),
+            rgba(0, 255, 156, 0.08) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+/* hacker text glow (THIS IS THE 3rd ONE) */
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 8px #00ff9c;
+}
+
+.hero h3 {
+    color: #9effd3;
+}
+
+.hero p {
+    color: #b8ffe4;
+}
+
 
 .hero .btn {
     display: inline-block;
