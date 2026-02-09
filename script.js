@@ -1,28 +1,28 @@
-const terminal = document.getElementById("terminal-output");
+const intro = document.getElementById("intro-terminal");
+const introOut = document.getElementById("intro-output");
+const portfolio = document.getElementById("portfolio-content");
 
-const logs = [
-  "[+] Initializing cyber security modules...",
-  "[+] Connecting to remote host 192.168.1.1",
-  "[+] Bypassing firewall rules...",
-  "[+] Access granted ✔",
-  "[+] Scanning open ports...",
-  "[!] Vulnerability detected: SQL Injection",
-  "[+] Deploying AI intrusion detection...",
-  "[+] Monitoring traffic in real-time...",
-  "[✔] System secured successfully",
+const introLogs = [
+  "Booting secure environment...",
+  "Loading cyber modules...",
+  "Initializing AI firewall...",
+  "Establishing encrypted tunnel...",
+  "Access granted ✔",
+  "",
+  "Welcome, Recruiter."
 ];
 
-let index = 0;
+let i = 0;
 
-function typeLog() {
-  if (index < logs.length) {
-    terminal.innerHTML += logs[index] + "\n";
-    terminal.scrollTop = terminal.scrollHeight;
-    index++;
-  } else {
-    index = 0;
-    terminal.innerHTML = "";
+const introInterval = setInterval(() => {
+  introOut.innerHTML += introLogs[i] + "\n";
+  i++;
+
+  if (i === introLogs.length) {
+    clearInterval(introInterval);
+    setTimeout(() => {
+      intro.style.display = "none";
+      portfolio.style.display = "block";
+    }, 1000);
   }
-}
-
-setInterval(typeLog, 1200);
+}, 700);
