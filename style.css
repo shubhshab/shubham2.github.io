@@ -1,142 +1,93 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+/* ===============================
+   HACKER / LIVE CYBER BACKGROUND
+   =============================== */
 
 body {
-    background: #f4f6f8;
-    color: #333;
-}
-
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: #111;
-    color: white;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 120px 20px;
-    background: radial-gradient(circle at top, #0f3d2e, #020d08);
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    background: radial-gradient(circle at top, #0a0f0a, #000000 80%);
     color: #00ff9c;
-    position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        repeating-linear-gradient(
-            0deg,
-            rgba(0, 255, 156, 0.08),
-            rgba(0, 255, 156, 0.08) 1px,
-            transparent 1px,
-            transparent 3px
-        );
-    opacity: 0.25;
-    pointer-events: none;
-}
-.hero {
-    text-align: center;
-    padding: 120px 20px;
-    background: radial-gradient(circle at top, #0f3d2e, #020d08);
+
+/* ===============================
+   TERMINAL GLOW TEXT
+   =============================== */
+
+h1, h2, h3 {
     color: #00ff9c;
-    position: relative;
-    overflow: hidden;
+    text-shadow: 0 0 8px rgba(0, 255, 156, 0.8);
 }
 
-/* hacked screen effect */
-.hero::before {
+p {
+    color: #b6ffe3;
+    line-height: 1.7;
+}
+
+/* ===============================
+   LIVE SCANLINE EFFECT
+   =============================== */
+
+body::after {
     content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        repeating-linear-gradient(
-            0deg,
-            rgba(0, 255, 156, 0.08),
-            rgba(0, 255, 156, 0.08) 1px,
-            transparent 1px,
-            transparent 3px
-        );
-    opacity: 0.25;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 255, 156, 0.05),
+        rgba(0, 255, 156, 0.05) 1px,
+        transparent 1px,
+        transparent 3px
+    );
     pointer-events: none;
+    z-index: 9999;
 }
 
-/* hacker text glow (THIS IS THE 3rd ONE) */
-.hero h1 {
-    font-size: 3rem;
-    text-shadow: 0 0 8px #00ff9c;
-}
+/* ===============================
+   HACKER BUTTON
+   =============================== */
 
-.hero h3 {
-    color: #9effd3;
-}
-
-.hero p {
-    color: #b8ffe4;
-}
-
-
-.hero .btn {
+.btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #00bcd4;
-    color: black;
+    padding: 12px 20px;
+    border: 1px solid #00ff9c;
+    color: #00ff9c;
     text-decoration: none;
-    border-radius: 5px;
+    background: transparent;
+    transition: all 0.3s ease;
 }
 
-/* Sections */
-section {
-    padding: 60px 40px;
-    text-align: center;
+.btn:hover {
+    background: #00ff9c;
+    color: #000;
+    box-shadow: 0 0 20px #00ff9c;
 }
 
-.skill-box span {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 15px;
-    background: #222;
-    color: white;
-    border-radius: 20px;
-}
+/* ===============================
+   PROJECT CARDS
+   =============================== */
 
-/* Projects */
 .project-card {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 700px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 255, 156, 0.4);
+    padding: 15px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgba(0, 255, 156, 0.3);
 }
 
-/* Footer */
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 15px;
+/* ===============================
+   FLICKER ANIMATION
+   =============================== */
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.85; }
+    100% { opacity: 1; }
+}
+
+h1 {
+    animation: flicker 2s infinite;
 }
